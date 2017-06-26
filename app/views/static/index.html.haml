@@ -1,0 +1,122 @@
+%nav{:role => "navigation", class: @color}
+  .nav-wrapper.container
+    %a#logo-container.brand-logo.white-text{:href => "#"} Harrington Electric
+    %ul.right.hide-on-med-and-down
+      %li
+        %a.white-text{:href => "#"} Reviews
+      %li
+        %a.white-text{:href => "#"} Photos
+      %li
+        %a.white-text{:href => "#"} Contact
+      %li
+        %a.white-text{:href => "#"} Payment
+    %ul#nav-mobile.side-nav{class: @color}
+      .container
+        %h6 Harrington Electric LLC
+        %p (405) 642-8066
+        %hr
+      %li
+        %a.white-text{:href => "#"} Reviews
+      %li
+        %a.white-text{:href => "#"} Photos
+      %li
+        %a.white-text{:href => "#"} Contact
+      %li
+        %a.white-text{:href => "#"} Payment
+    %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
+      %i.material-icons.white-text menu
+#index-banner.parallax-container
+  .section.no-pad-bot
+    .container
+      %br/
+      %br/
+      -#%h1.header.center.white-text.text-lighten-2=# Harrington Electric
+      .row.center
+        -#%h5.header.col.s12.light=#Faker::Company.catch_phrase
+      .row.center
+        -#%a#download-button.btn-large.waves-effect.waves-light.teal.lighten-1{:href => "http://materializecss.com/getting-started.html"} Get Started
+      %br/
+      %br/
+  .parallax
+    = image_tag("#{@images[0]}", width: "1440", alt: "#{@images[0]}")
+    -# %img{:alt => "Unsplashed background img 1", :src => "background1.jpg"}/
+.container
+  .section
+    / Icon Section
+    .row
+      .col.s12.m4
+        .icon-block
+          %h2.center{class: "#{@color}-text"}
+            %i.material-icons flash_on
+          %h5.center=Faker::Company.buzzword.capitalize
+          %p.light=Faker::Lorem.paragraph # We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+      .col.s12.m4
+        .icon-block
+          %h2.center{class: "#{@color}-text"}
+            %i.material-icons group
+          %h5.center=Faker::Company.buzzword.capitalize
+          %p.light=Faker::Lorem.paragraph # By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+      .col.s12.m4
+        .icon-block
+          %h2.center{class: "#{@color}-text"}
+            %i.material-icons settings
+          %h5.center=Faker::Company.buzzword.capitalize# Easy to work with
+          %p.light=Faker::Lorem.paragraph # We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+.parallax-container.valign-wrapper
+  .section.no-pad-bot
+    .container
+      .row.center
+        %h5.header.col.s12.light{class: "#{@color}-text"}=Faker::Company.catch_phrase# A modern responsive front-end framework based on Material Design
+  .parallax
+    = image_tag("#{@images[1]}", width: "1440", alt: "#{@images[1]}")
+    -# %img{:alt => "Unsplashed background img 2", :src => "background2.jpg"}/
+.container
+  .section
+    .row
+      .col.s12.center
+        %h3
+          %i.mdi-content-send.brown-text
+        %h4 Contact Us
+        %p.left-align.light Call us at (405) 642-8066
+        %form.col.s12
+          .row
+            .input-field.col.s6
+              %input#name.validate{:type => "text"}/
+              %label{:for => "name"} Name
+            .input-field.col.s6
+              %input#email.validate{:type => "email"}/
+              %label{:for => "email"} Email Address
+            .input-field.col.s12
+              %textarea#problem.materialize-textarea
+              %label{:for => "problem"} Describe your problem
+.parallax-container.valign-wrapper
+  .section.no-pad-bot
+    .container
+      .row.center
+        %h5.header.col.s12.black-text=Faker::Company.catch_phrase# A modern responsive front-end framework based on Material Design
+  .parallax
+    = image_tag("#{@images[2]}", width: "1440", alt: "#{@images[2]}")
+    -# %img{:alt => "Unsplashed background img 3", :src => "background3.jpg"}/
+%footer.page-footer{class: @color}
+  .container
+    .row
+      .col.l9.s9
+        %h5.white-text Company Bio
+        %p.grey-text.text-lighten-4=Faker::Lorem.sentence# We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+      .col.l3.s3
+        %h5.white-text Social Media
+        %ul
+          %li
+            %a.white-text{:href => "#!"} Facebook
+          %li
+            %a.white-text{:href => "#!"} Twitter
+          %li
+            %a.white-text{:href => "#!"} Yelp
+          %li
+            %a.white-text{:href => "#!"} Instagram
+          %li
+            %a.white-text{href: "#!"} Sqaure
+  .footer-copyright
+    .container
+      Made by
+      %a.brown-text.text-lighten-3{:href => "http://lazyshark.biz"} Lazy Shark
