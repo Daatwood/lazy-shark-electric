@@ -89,6 +89,14 @@
             .input-field.col.s12
               %textarea#problem.materialize-textarea
               %label{:for => "problem"} Describe your problem
+            -# .input-field.col.s12.left
+            -#   %input#emergency{type: "checkbox"}
+            -#   %label{:for => "emergency"} Emergency
+          .row
+            %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
+              Submit
+              %i.material-icons.right send
+
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container
