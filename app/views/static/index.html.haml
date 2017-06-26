@@ -10,19 +10,19 @@
         %a.white-text{:href => "#"} Contact
       %li
         %a.white-text{:href => "#"} Payment
-    %ul#nav-mobile.side-nav{class: @color}
-      .container
+    %ul#nav-mobile.side-nav
+      .container{class: "#{@color}-text"}
         %h6 Harrington Electric LLC
         %p (405) 642-8066
         %hr
       %li
-        %a.white-text{:href => "#"} Reviews
+        %a{class: "#{@color}-text", :href => "#"} Reviews
       %li
-        %a.white-text{:href => "#"} Photos
+        %a{class: "#{@color}-text", :href => "#"} Photos
       %li
-        %a.white-text{:href => "#"} Contact
+        %a{class: "#{@color}-text", :href => "#"} Contact
       %li
-        %a.white-text{:href => "#"} Payment
+        %a{class: "#{@color}-text", :href => "#"} Payment
     %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
       %i.material-icons.white-text menu
 #index-banner.parallax-container
