@@ -6,6 +6,6 @@ class StaticController < ApplicationController
     end
     puts "#{@background_images.inspect}"
     @images = @background_images.sample(3)
-    @color = Faker::Color.color_name
+    @color = 'blue'
   end
 end

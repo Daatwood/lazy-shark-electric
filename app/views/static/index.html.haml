@@ -1,121 +1,149 @@
-%nav{:role => "navigation", class: @color}
+%nav.black{:role => "navigation"}
   .nav-wrapper.container
-    %a#logo-container.brand-logo.white-text{:href => "#"} Harrington Electric
+    %a#logo-container.brand-logo.white-text{:href => "#"}
+      %i.material-icons lightbulb_outline
+      Harrington Electric
     %ul.right.hide-on-med-and-down
       %li
-        %a.white-text{:href => "#"} Reviews
+        %a.white-text{:href => "#testimonials"} Testimonials
       %li
-        %a.white-text{:href => "#"} Photos
+        %a.white-text{:href => "#services"} Services
       %li
-        %a.white-text{:href => "#"} Contact
+        %a.white-text{:href => "#contact"} Contact
       %li
-        %a.white-text{:href => "#"} Payment
-    %ul#nav-mobile.side-nav
-      .container{class: "#{@color}-text"}
+        %a.white-text.btn.light-blue{:href => "https://squareup.com/", target: "_blank"} Payment
+    %ul#nav-mobile.side-nav.white.darken-2
+      .container.blue-text
         %h6 Harrington Electric LLC
         %p (405) 642-8066
         %hr
       %li
-        %a{class: "#{@color}-text", :href => "#"} Reviews
+        %a.blue-text{class: "#{@color}-text", :href => "#testimonials"} Testimonials
       %li
-        %a{class: "#{@color}-text", :href => "#"} Photos
+        %a.blue-text{class: "#{@color}-text", :href => "#services"} Services
       %li
-        %a{class: "#{@color}-text", :href => "#"} Contact
+        %a.blue-text{class: "#{@color}-text", :href => "#contact"} Contact
       %li
-        %a{class: "#{@color}-text", :href => "#"} Payment
+        %a.blue-text{:href => "https://squareup.com/", target: "_blank"} Payment
     %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
       %i.material-icons.white-text menu
-#index-banner.parallax-container
-  .section.no-pad-bot
-    .container
-      %br/
-      %br/
-      -#%h1.header.center.white-text.text-lighten-2=# Harrington Electric
-      .row.center
-        -#%h5.header.col.s12.light=#Faker::Company.catch_phrase
-      .row.center
-        -#%a#download-button.btn-large.waves-effect.waves-light.teal.lighten-1{:href => "http://materializecss.com/getting-started.html"} Get Started
-      %br/
-      %br/
+.parallax-container#index-banner
   .parallax
-    = image_tag("#{@images[0]}", width: "1440", alt: "#{@images[0]}")
-    -# %img{:alt => "Unsplashed background img 1", :src => "background1.jpg"}/
-.container
+    = image_tag("#{%w(all_lights wires).sample}.jpeg")
+.container#top
   .section
     / Icon Section
     .row
       .col.s12.m4
         .icon-block
-          %h2.center{class: "#{@color}-text"}
+          %h2.center.yellow-text.text-darken-2
             %i.material-icons flash_on
-          %h5.center=Faker::Company.buzzword.capitalize
-          %p.light=Faker::Lorem.paragraph # We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+          %h4.center.fancy-font Reliable
+          %p.light Comprehensive electrical contracting company with expertise in all areas of electrical installations.
       .col.s12.m4
         .icon-block
-          %h2.center{class: "#{@color}-text"}
+          %h2.center.red-text
+            %i.material-icons warning
+          %h4.center.fancy-font 24 Hr Emergency Service
+          %p.light
+            Emergency electrical problems can strike suddenly without advanced warning.
+          %p.center
+            %a.btn.waves-effect.waves-light.remote.blue{href: "#contact"}
+              Contact Us
+      .col.s12.m4
+        .icon-block
+          %h2.center.green-text
             %i.material-icons group
-          %h5.center=Faker::Company.buzzword.capitalize
-          %p.light=Faker::Lorem.paragraph # By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
-      .col.s12.m4
-        .icon-block
-          %h2.center{class: "#{@color}-text"}
-            %i.material-icons settings
-          %h5.center=Faker::Company.buzzword.capitalize# Easy to work with
-          %p.light=Faker::Lorem.paragraph # We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+          %h4.center.fancy-font Specialists
+          %p.light We service all electrical needs from homeowners, general contractors, real estate management companies and builders
 .parallax-container.valign-wrapper
-  .section.no-pad-bot
-    .container
-      .row.center
-        %h5.header.col.s12.light{class: "#{@color}-text"}=Faker::Company.catch_phrase# A modern responsive front-end framework based on Material Design
   .parallax
-    = image_tag("#{@images[1]}", width: "1440", alt: "#{@images[1]}")
-    -# %img{:alt => "Unsplashed background img 2", :src => "background2.jpg"}/
-.container
-  .section
-    .row
-      .col.s12.center
-        %h3
-          %i.mdi-content-send.brown-text
-        %h4 Contact Us
-        %p.left-align.light Call us at (405) 642-8066
-        %form.col.s12
-          .row
-            .input-field.col.s6
-              %input#name.validate{:type => "text"}/
-              %label{:for => "name"} Name
-            .input-field.col.s6
-              %input#email.validate{:type => "email"}/
-              %label{:for => "email"} Email Address
-            .input-field.col.s12
-              %textarea#problem.materialize-textarea
-              %label{:for => "problem"} Describe your problem
-            -# .input-field.col.s12.left
-            -#   %input#emergency{type: "checkbox"}
-            -#   %label{:for => "emergency"} Emergency
-          .row
-            %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
-              Submit
-              %i.material-icons.right send
+    = image_tag("lightning.jpeg")
 
+.container#testimonials
+  .section
+    .row.col.s12.center
+      %h2.fancy-font.blue-text
+        %i.material-icons people_outline
+        Testimonials
+    .row
+      .col.l6.s12
+        -# %iframe{:allowtransparency => "true", :frameborder => "0", :height => "392", :scrolling => "no", :src => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichelle.r.collier.7%2Fposts%2F1598982243446306%3A0&width=350", :style => "border:none;overflow:hidden", :width => "350"}
+        .card.blue.darken-2
+          .card-action
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            .right
+              %a{:href => "https://www.facebook.com/michelle.r.collier.7/posts/1598982243446306:0", target: "_blank"}
+                %i.material-icons.white-text link
+          .card-content.white-text
+            %span.card-title Michelle R Collier
+            %p.small June 4 at 7:02pm
+            %p
+              We had Harrington Electric do some electrical work for our Escape Room. There were lots of mistakes from previous contractors and some pretty complex problems to solve. Kyle did a great job at a very reasonable price. We will definitely use Harrington Electric in the future -- highly recommended!
+      .col.l6.s12
+        .card.blue.darken-2
+          .card-action
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.yellow-text star
+            %i.material-icons.white-text star
+          .card-content.white-text
+            %span.card-title John Smith
+            %p.small June 4 at 7:02pm
+            %p= Faker::Lorem.paragraph
 .parallax-container.valign-wrapper
-  .section.no-pad-bot
-    .container
-      .row.center
-        %h5.header.col.s12.black-text=Faker::Company.catch_phrase# A modern responsive front-end framework based on Material Design
   .parallax
-    = image_tag("#{@images[2]}", width: "1440", alt: "#{@images[2]}")
-    -# %img{:alt => "Unsplashed background img 3", :src => "background3.jpg"}/
+    = image_tag "girl.jpeg"
+.container#contact
+  .section
+    .row.col.s12.center
+      %h2.fancy-font.blue-text
+        %i.material-icons people_outline
+        Contact Us
+      %h5.header.col.s12.black-text
+        24 Hr. Emergency Service Available
+        %br
+        %br
+        (405) 642-8066
+    .fixed-action-btn{style: "bottom: 45px; right: 24px"}
+      %a#help.waves-effect.waves-light.btn.btn-floating.black{href: "#contact"}
+        %i.material-icons help_outline
+    .tap-target{"data-activates" => "help"}
+      .tap-target-content
+        %h5.white-text Need help?
+        %p.white-text Contact us today for a free estimate!
+    .row.col.s12.center
+      %form.col.offset-l3.l6.s12
+        .row
+          .input-field.col.l6.s12
+            %input#name.validate{:type => "text"}/
+            %label{:for => "name"} Name
+          .input-field.col.l6.s12
+            %input#email.validate{:type => "email"}/
+            %label{:for => "email"} Email Address
+          .input-field.col.s12
+            %textarea#problem.materialize-textarea
+            %label{:for => "problem"} Describe your problem
+        .row
+          %button.btn.waves-effect.waves-light.remote.green{:name => "action", :type => "submit", onclick: "Materialize.toast('Inquiry Sent.', 4000)"}
+            Submit
+            %i.material-icons.right send
 %footer.page-footer{class: @color}
-  .container
+  .container#about
     .row
       .col.l9.s9
-        %h5.white-text Company Bio
-        %p.grey-text.text-lighten-4=Faker::Lorem.sentence# We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+        %h5.white-text About Me
+        %p.grey-text.text-lighten-4 Fair and honest electrical contractor. 7 years of commercial, residential and light industrial electrical installations and troubleshooting experience.
       .col.l3.s3
         %h5.white-text Social Media
         %ul
           %li
-            %a.white-text{:href => "#!"} Facebook
+            %a.white-text{:href => "https://www.facebook.com/HarringtonElectric", target: "_blank"} Facebook
           %li
             %a.white-text{:href => "#!"} Twitter
           %li
@@ -123,8 +151,8 @@
           %li
             %a.white-text{:href => "#!"} Instagram
           %li
-            %a.white-text{href: "#!"} Sqaure
-  .footer-copyright
+            %a.white-text{:href => "https://squareup.com/", target: "_blank"} Sqaure
+  .footer-copyright.black
     .container
       Made by
       %a.brown-text.text-lighten-3{:href => "http://lazyshark.biz"} Lazy Shark

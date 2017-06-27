@@ -1,8 +1,19 @@
-/* Custom Stylesheet */
 nav {
   ul a, .brand-logo {
     color: #444;
   }
+}
+
+.fancy-font {
+  font-family: 'IndustrialRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brand-logo {
+  font-family: 'IndustrialRegular';
+  font-weight: normal;
+  font-style: normal;
 }
 
 p {
@@ -12,15 +23,26 @@ p {
 .button-collapse {
   color: #26a69a;
 }
+//
+// .parallax-container {
+//   min-height: 380px;
+//   line-height: 0;
+//   height: auto;
+//   color: rgba(255, 255, 255, 0.9);
+//   .section {
+//     width: 100%;
+//   }
+// }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255, 255, 255, 0.9);
-  .section {
-    width: 100%;
-  }
+.parallax-header {
+  position: relative;
+}
+
+.bottom {
+  position:absolute;
+  width:100%;
+  bottom:0;
+  text-align:center;
 }
 
 @media only screen and (max-width: 992px) {

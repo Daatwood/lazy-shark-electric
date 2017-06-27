@@ -1,8 +1,11 @@
-(function($){
-  $(function(){
+var ready = function() {
+  $('.button-collapse').sideNav();
+  $('.parallax').parallax();
+  $('.carousel').carousel();
+  setTimeout(function(){
+    $('.tap-target').tapTarget('open');
+  }, 2500);
+};
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+$(document).ready(ready);
+$(document).on('page:change', ready);
